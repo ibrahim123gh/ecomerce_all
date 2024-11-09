@@ -1,0 +1,59 @@
+.Download{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.Download h1{
+    font-size: 40px;
+}
+
+.Download .image_download{
+    margin-top: 40px;
+}
+
+.Download .image_download img{
+    width: 170px;
+    height: 60px;
+    border-radius: 15px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+@media (max-width:1050px) {
+    .Download .image_download img{
+        width: 150px;
+        height: 55px;
+    }
+
+    .Download h1{
+        font-size: 33px;
+    }
+    
+}
+
+@media (max-width:750px) {
+    .Download .image_download img{
+        width: 130px;
+        height: 50px;
+    }
+
+    .Download h1{
+        font-size: 33px;
+    }
+    
+}
+
+@media (max-width:550px) {
+    .Download .image_download img{
+        width: 120px;
+        height: 40px;
+    }
+
+    .Download h1{
+        font-size: 30px;
+    }
+    
+}

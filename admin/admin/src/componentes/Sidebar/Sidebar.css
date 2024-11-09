@@ -1,0 +1,45 @@
+.sidebar_admin {
+    width: 18%;
+    border-right: 1px solid gray;
+    min-height: calc(100vh - 110px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw 0px 4vw 4vw;
+}
+
+.sidebar_admin .side {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-right: 0;
+    padding: 1vw;
+    font-weight: 550;
+}
+
+.sidebar_admin .side i {
+    margin-right: 1.1vw;
+    color: gray;
+    font-size: 30px;
+}
+
+.sidebar_admin .active{
+    background-color: rgb(254, 226, 222);
+}
+
+@media (max-width:950px) {
+    .sidebar_admin .side p{
+        display: none;
+    }
+
+    .sidebar_admin .side i{
+        font-size: 22px;
+    }
+
+    .sidebar_admin .side{
+        width: 100%;
+        text-align: center;
+    }
+}

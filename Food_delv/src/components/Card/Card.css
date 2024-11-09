@@ -1,0 +1,175 @@
+.card {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.card .card_container {
+    width: 100%;
+}
+
+.title_card {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+}
+
+.card .card_container .title_card p {
+    color: rgb(150, 150, 150);
+    font-weight: 550;
+    font-size: max(1.5fr, 18px);
+}
+
+.card .card_container hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(222, 219, 219);
+}
+
+.card .card_all .container_car {
+    align-items: center;
+}
+
+.card .card_all .container_car p {
+    margin: 5px 0px;
+    font-size: max(1fr, 18px);
+    color: rgb(116, 115, 115);
+}
+
+.card .card_all .container_car p img {
+    width: 60px;
+    height: 60px;
+}
+
+.card .card_all hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(222, 219, 219);
+}
+
+.card .card_all .container_car .close {
+    color: tomato;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fatoura{
+    width: 100%;
+    margin-top: 80px;
+}
+
+.fatoura .card_fatoura{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.fatoura .card_fatoura .fatou_totale{
+    width: 50%;
+}
+
+.fatoura .card_fatoura .fatou_totale h2{
+    margin-bottom: 12px;
+}
+
+.fatoura .card_fatoura .fatou_totale .container_fatoura .fatoura_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    color: #555;
+    font-size: 17px;
+}
+
+.fatoura .card_fatoura .fatou_totale .container_fatoura hr{
+    border: none;
+    height: 2px;
+    background-color: rgb(222, 219, 219);
+}
+
+.fatoura .card_fatoura .fatou_totale .container_fatoura button{
+    border: none;
+    outline: none;
+    background-color: tomato;
+    width: max(15vw,180px);
+    padding: 15px;
+    margin-top: 15px;
+    color: white;
+    border-radius: 5px;
+    font-size: max(0.8vw,12px);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.fatoura .card_fatoura .fatou_totale .container_fatoura button:hover{
+    transform: scale(1.05);
+    letter-spacing: 1px;
+}
+
+.fatoura .card_fatoura .fatoura_left{
+    width: 40%;
+}
+
+.fatoura .card_fatoura .fatoura_left .fatouran_input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eae8e8;
+    margin-bottom: 15px;
+}
+
+.fatoura .card_fatoura .fatoura_left p{
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.fatoura .card_fatoura .fatoura_left .fatouran_input input{
+    outline: none;
+    border: none;
+    font-size: max(0.8vw,13px);
+    padding: 10px;
+    background-color: transparent;
+}
+
+.fatoura .card_fatoura .fatoura_left .fatouran_input button{
+    width: max(10vw,150px);
+    padding: 10px;
+    font-size: max(0.8vw,13px);
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.fatoura .card_fatoura .fatoura_left .fatouran_input button:hover{
+    transform: scale(1.05);
+    letter-spacing: 1px;
+}
+
+@media (max-width:600px) {
+    .card .card_all .container_car p{
+        font-size: 14px;
+    }
+
+    .card .card_all .container_car p img {
+        width: 40px;
+        height: 40px;
+    }
+    .card .card_container .title_card p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:750px) {
+    .fatoura .card_fatoura{
+        flex-direction: column-reverse;
+    }
+
+    .fatoura .card_fatoura .fatoura_left{
+        width: 100%;
+    }
+    .fatoura .card_fatoura .fatou_totale{
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+}

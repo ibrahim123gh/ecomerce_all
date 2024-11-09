@@ -1,0 +1,92 @@
+.add_items {
+    width: 100%;
+    padding: 60px 90px;
+}
+
+.add_items .inp_add {
+    width: 70%;
+    color: gray;
+}
+
+.add_items .inp_add label img {
+    width: 140px;
+    height: 100px;
+    border: 1px solid #d4d2d2;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.add_items .add_inp {
+    width: 70%;
+    margin: 20px 0px;
+}
+
+.add_items .add_inp p {
+    margin: 10px 0px;
+    color: gray;
+}
+
+.add_items .add_inp input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #b3aeae;
+    font-size: 16px;
+}
+
+.add_items .add_inp textarea {
+    width: 100%;
+    padding: 10px;
+    height: 170px;
+    border: 2px solid #d4d2d2;
+    font-size: 16px;
+}
+
+.add_items .add_price_cat {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+    gap: 30px;
+}
+
+
+.add_items .add_price_cat .option p {
+    color: gray;
+    margin-bottom: 12px;
+}
+
+.add_items .add_price_cat .option select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid #b3aeae;
+    color: gray;
+}
+
+.add_items .add_price_cat .price p {
+    color: gray;
+}
+
+.add_items .add_price_cat .price input {
+    padding: 10px;
+    width: 70%;
+    font-size: 16px;
+    margin-top: 12px;
+    border: none;
+    outline: none;
+    border: 1px solid #b3aeae;
+}
+
+.add_items button{
+    padding: 12px 55px ;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}

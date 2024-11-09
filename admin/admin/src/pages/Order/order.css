@@ -1,0 +1,52 @@
+.order {
+    width: 100%;
+    min-height: 60vh;
+    margin: 70px;
+}
+
+.order h2 {
+    font-size: 30px;
+    color: #505050;
+    margin-bottom: 30px;
+}
+
+.order .order_data {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1fr 1fr 1fr;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+}
+
+.order .order_data img {
+    width: 100px;
+    height: 100px;
+}
+
+.order .order_data .container_info .orde {
+    padding-bottom: 18px;
+    font-weight: bold;
+}
+
+.order .order_data .container_info p {
+    margin-bottom: 7px;
+    color: black;
+}
+
+.order .order_data .container_info .info{
+    margin-bottom: 15px;
+}
+
+.order .order_data p {
+    color: #505050;
+}
+
+.order .order_data select{
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid rgb(249, 176, 163);
+    background-color: rgb(246, 214, 209);
+    outline: 1px solid #bfbfc0;
+}

@@ -1,0 +1,70 @@
+.explor-menu {
+    margin-top: 30px;
+    font-family: Georgia, serif;
+}
+
+.explor-menu .txt-menu p {
+    margin-top: 1vw;
+    width: 50%;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.explor-menu .txt-menu h2 {
+    font-size: 20px;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.explor-menu .txt-menu .menu {
+    display: flex;
+    align-items: center;
+    margin-top: 2vw;
+    overflow-x: scroll;
+    gap: 2vw;
+    margin-bottom: 25px;
+}
+
+.explor-menu .txt-menu .menu .menu-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.explor-menu .txt-menu .menu .menu-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.explor-menu .txt-menu .menu .menu-item .active {
+    border: 3px solid tomato;
+    padding: 2px;
+}
+
+.explor-menu .txt-menu .menu .menu-item h3 {
+    margin-top: 10px;
+    color: gray;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.explor-menu .txt-menu .menu::-webkit-scrollbar {
+    display: none;
+}
+
+.explor-menu hr {
+    margin: 20px 0px;
+    height: 2px;
+    background-color: #00000015;
+    border: none;
+}
+
+@media (max-width:1050px) {
+    .explor-menu .txt-menu p{
+        width: 100%;
+    }
+}

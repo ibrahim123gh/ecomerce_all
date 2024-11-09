@@ -1,0 +1,44 @@
+.myOrder {
+    width: 100%;
+    min-height: 100vh;
+    margin: 70px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.myOrder h1 {
+    margin: 20px 0px;
+}
+
+.myOrder .orderList{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    border: 2px solid #ada9a9;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.myOrder .orderList img{
+    width: 80px;
+    height: 80px;
+}
+
+.myOrder .orderList p span{
+    color: rgb(252, 77, 46);
+    margin-right: 6px;
+}
+
+.myOrder .orderList button{
+    outline: none;
+    border: none;
+    background-color: rgb(252, 204, 197);
+    width: 150px;
+    padding: 10px;
+    outline: 2px solid #f7f8f9;
+    cursor: pointer;
+}
+
+.myOrder .orderList button:hover{
+    background-color: rgb(246, 171, 158);
+}
