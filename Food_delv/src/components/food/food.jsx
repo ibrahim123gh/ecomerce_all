@@ -1,11 +1,11 @@
 import FoodDisplay from "../foodDisplay/FoodDisplay";
 import "./food.css";
 import { StoreContext } from "../StoreContext/StoreContext";
-import { useContext} from "react";
+import { useContext } from "react";
 
-// eslint-disable-next-line react/prop-types
-const Food = ({ category }) => {
-  const { food_list } = useContext(StoreContext);
+const Food = () => {
+  const { food_list, filterData } = useContext(StoreContext);
+  console.log(food_list);
 
   return (
     <div className="food">
@@ -13,7 +13,7 @@ const Food = ({ category }) => {
         <h2>Top dishes near you</h2>
         <div className="container_food">
           {food_list.map((items, index) => {
-            if(category === "All" || category === items.category){
+            if (filterData === "" || filterData === items.category._id) {
               return (
                 <div key={index}>
                   <FoodDisplay
@@ -26,8 +26,8 @@ const Food = ({ category }) => {
                   />
                 </div>
               );
-            }})
             }
+          })}
         </div>
       </div>
     </div>

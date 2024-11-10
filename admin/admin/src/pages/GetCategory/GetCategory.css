@@ -1,0 +1,7 @@
+.list_admin .head_categ {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1fr 1fr;
+    border: 1px solid #e1dfdf;
+    padding: 14px;
+    align-items: center;
+}

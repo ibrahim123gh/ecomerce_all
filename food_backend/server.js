@@ -7,6 +7,7 @@ import userRouter from "./router/usersRouter.js";
 import "dotenv/config"
 import routerItem from "./router/productRouter.js"
 import orderRouter from "./router/orderRouter.js"
+import categoryRouter from "./router/categoryRouter.js"
 
 const app = express();
 app.use(cors()); 
@@ -19,6 +20,7 @@ app.use("/images", express.static("upload"));
 app.use("/api/user", userRouter);
 app.use("/api/items", routerItem);
 app.use("/api/order", orderRouter);
+app.use("/api/category", categoryRouter);
 
 const port = 4000;
 app.get("/", (req, res) => {

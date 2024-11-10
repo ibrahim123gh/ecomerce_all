@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post("/add", upload.single("image"), addData);
-router.get("/list", listData);
+router.post("/list", listData);
 router.delete("/remove", removeData);
 
 export default router;

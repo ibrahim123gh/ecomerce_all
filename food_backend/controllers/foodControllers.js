@@ -23,12 +23,17 @@ const addData = async (req, res) => {
 
 const listData = async (req, res) => {
   try {
-    const data = await foodModel.find({});
+    let findData = {};
+    if (req.body.id !== "") findData = { category: req.body.id };
+    console.log(req.body.id);
+    const data = await foodModel.find(findData).populate("category");
+    console.log(data);
     res.json(data);
   } catch (error) {
-    console.log(error);
+    console.log(error)
   }
 };
+
 
 const removeData = async (req, res) => {
   try{

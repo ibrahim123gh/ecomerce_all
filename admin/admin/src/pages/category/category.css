@@ -1,0 +1,59 @@
+.category {
+    width: 100%;
+    margin: 70px;
+    min-height: 60vh;
+}
+
+.category h2 {
+    margin-bottom: 30px;
+}
+
+.category .category_info {
+    width: 100%;
+}
+
+.category .category_info form {
+    width: 100%;
+}
+
+.category .category_info form .image_upload label img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #bfbbbb;
+}
+
+.category .category_info form p {
+    font-size: 16px;
+    color: #505050;
+    margin-bottom: 10px;
+}
+
+.bot {
+    margin-bottom: 20px;
+}
+
+.category .category_info form .add_inp input {
+    width: 40%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #838282;
+    font-size: 16px;
+}
+
+.category .category_info form .add_inp textarea {
+    width: 40%;
+    height: 180px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.category .category_info form button {
+    padding: 12px 55px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}

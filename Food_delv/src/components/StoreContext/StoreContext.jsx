@@ -7,14 +7,20 @@ import { toast } from "react-toastify";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
+    const [filterData, seFilterData] = useState("");
+
   const [orderBy, setOrderBy] = useState([])
 
   const [token, setToken] = useState("");
   const [food_list, setFood_list] = useState([]);
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:4000/api/food/list");
+    const response = await axios.post("http://localhost:4000/api/food/list", {
+      id: filterData,
+    });
+    console.log(filterData);
     setFood_list(response.data);
+    console.log(food_list);
   };
 
   const getData = async (token) => {
@@ -32,8 +38,11 @@ const StoreContextProvider = (props) => {
   }
 
   useEffect(() => {
+    fetchData();
+  }, [filterData]);
+
+  useEffect(() => {
     const loadData = async () => {
-      fetchData();
       if (localStorage.getItem("token")) {
         setToken(localStorage.getItem("token"));
         await getData(localStorage.getItem("token"));
@@ -96,6 +105,8 @@ const StoreContextProvider = (props) => {
     totale_price,
     token,
     setToken,
+    filterData,
+    seFilterData,
   };
 
   return (

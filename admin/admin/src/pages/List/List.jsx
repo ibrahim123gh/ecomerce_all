@@ -9,9 +9,13 @@ const List = () => {
   const [items, setItems] = useState([]);
 
   const fetchData = async () => {
-    const resopnse = await axios.get(`${url}/api/food/list`);
+    const resopnse = await axios.post(`${url}/api/food/list`,{
+      id:""
+    });
+    console.log(resopnse)
     setItems(resopnse.data);
   };
+  console.log(items);
 
   const removeItems = async (itemsId) => {
     const resopnse = await axios.delete(`${url}/api/food/remove`, {
@@ -48,7 +52,7 @@ const List = () => {
             </p>
             <p>{item.name}</p>
             <p>${item.price}</p>
-            <p>{item.category}</p>
+            <p>{item.category.name}</p>
             <p>
               <i
                 onClick={() => removeItems(item._id)}

@@ -1,19 +1,17 @@
+/* eslint-disable react/prop-types */
 import "./Add.css";
 import upload from "../../assets/upload.png";
 import { useEffect, useState } from "react";
-import axios from  "axios";
+import axios from "axios";
 import { toast } from "react-toastify";
 
-
-const Add = () => {
-
-
+const Add = ({ categories }) => {
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
     description: "",
     price: "",
-    category: "salad",
+    category: "",
   });
 
   const setDa = (e) => {
@@ -28,14 +26,14 @@ const Add = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if(image){
+    if (image) {
       const formData = new FormData();
       formData.append("name", data.name);
       formData.append("price", data.price);
       formData.append("description", data.description);
       formData.append("category", data.category);
-      formData.append("image", image); 
-      
+      formData.append("image", image);
+
       try {
         const response = await axios.post(
           "http://localhost:4000/api/food/add",
@@ -49,19 +47,21 @@ const Add = () => {
           name: "",
           description: "",
           price: "",
-          category: "salad",
-        })
-        setImage(false)
-        console.log(response);
+          category: "...",
+        });
+        setImage(false);
       } catch (error) {
-        console.log(error)
-        toast.error("error")
+        console.log(error);
+        toast.error("error");
       }
-    }else{
-      alert("enter a image")
+    } else {
+      alert("enter a image");
     }
-    
   };
+
+  useEffect(() => {
+    console.log(data);
+  }, []);
 
   return (
     <div className="add_items">
@@ -101,14 +101,14 @@ const Add = () => {
           <div className="option">
             <p>Product Category</p>
             <select name="category" value={data.category} onChange={setDa}>
-              <option value="Sandwish">Sandwish</option>
-              <option value="Salad">Salad</option>
-              <option value="Rools">Rools</option>
-              <option value="Deserts">Deserts</option>
-              <option value="Cake">Cake</option>
-              <option value="PutVeg">Put Veg</option>
-              <option value="Pasta">Pasta</option>
-              <option value="Noodles">Noodles</option>
+            <option value="...">...</option>
+              {categories.map((items, index) => {
+                return (
+                  <option value={items._id} key={index}>
+                    {items.name}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <div className="price">

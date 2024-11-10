@@ -1,8 +1,31 @@
+import { useState } from "react";
 import "./explorOur.css";
-import { Data } from "../data/data";
+import axios from "axios";
+import { useEffect } from "react";
+import { useContext } from "react";
+import { StoreContext } from "../StoreContext/StoreContext";
 
 // eslint-disable-next-line react/prop-types
-const ExplorOur = ({ setCategory, category }) => {
+const ExplorOur = () => {
+  const { filterData, seFilterData } = useContext(StoreContext)
+  const [categorys, setCategorys] = useState([]);
+
+  const getCategory = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:4000/api/category/list"
+      );
+      console.log(response.data.categ);
+      setCategorys(response.data.categ);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getCategory();
+  }, []);
+  console.log(filterData);
   return (
     <div className="explor-menu" id="menu">
       <div className="txt-menu">
@@ -13,20 +36,18 @@ const ExplorOur = ({ setCategory, category }) => {
           experience, one delicious meal at a time.
         </p>
         <div className="menu">
-          {Data.map((items, index) => {
+          {categorys.map((items, index) => {
             return (
               <div
                 onClick={() =>
-                  setCategory((prev) =>
-                    prev === items.name ? "All" : items.name
-                  )
+                  seFilterData((prev) => (prev === items._id ? "" : items._id))
                 }
                 className="menu-item"
                 key={index}
               >
                 <img
-                  src={items.image}
-                  className={category === items.name ? "active" : ""}
+                  src={`http://localhost:4000/images/` + items.image}
+                  className={filterData === items._id ? "active" : ""}
                   alt=""
                 />
                 <h3>{items.name}</h3>
